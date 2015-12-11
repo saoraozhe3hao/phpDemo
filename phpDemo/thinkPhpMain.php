@@ -1,6 +1,6 @@
 <?php
    //thinkPHP demo入口文件
-   //定义以下常量后，初次访问该入口，会在应用目录下自动生成目录ThinkPHPDemo
+   //定义以下常量后，初次访问该入口，会在PHP根目录下自动生成Think应用目录ThinkPHPDemo
    define('APP_PATH', './ThinkPHPDemo/');
    /*ThinkPHPDemo目录下
     *  Common  存放当前项目的公共函数
@@ -9,4 +9,5 @@
     * */
    require_once 'ThinkPHP/ThinkPHP.php';
    // 运行流程，加载 ThinkPHP.php，加载核心Think类(包括框架配置文件)，加载应用配置文件，调用控制器
+   //访问地址，见 ThinkPHPDemo/Home/Conf/config.php中的配置
 ?>
