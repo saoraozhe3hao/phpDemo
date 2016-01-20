@@ -6,6 +6,7 @@ class IndexController extends Controller {
         //读取配置
         $name = C('name');
         $this->show($name,'utf-8');
+		//生成地址
         echo '<br/>'.U("Index/index");
         
         //使用框架自带的模型访问数据库表 think_user
@@ -45,5 +46,9 @@ class IndexController extends Controller {
         //写入
         $model->execute('update think_user set name="hong"');
         
+		//输出模板
+		$this->assign('name',"模板里用到的变量");
+		//默认的模板为，View/当前Controller/当前Action.html
+        $this->display();
     }
 }
